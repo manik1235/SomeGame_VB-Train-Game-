@@ -24,23 +24,37 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.PlayAreaPanel = New System.Windows.Forms.Panel()
-        Me.ToyPanel = New System.Windows.Forms.Panel()
-        Me.TickTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.ToyPictureBox = New System.Windows.Forms.PictureBox()
         Me.ToySettingsPanel = New System.Windows.Forms.Panel()
+        Me.GreenToySettingsGroupBox = New System.Windows.Forms.GroupBox()
+        Me.GreenToyVSpeedNumericUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.GreenToyEnabledCheckBox = New System.Windows.Forms.CheckBox()
+        Me.GreenToyHSpeedNumericUpDown = New System.Windows.Forms.NumericUpDown()
         Me.ToySettingsGroupBox = New System.Windows.Forms.GroupBox()
-        Me.HSpeedNumericUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.ToyVSpeedNumericUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.ToyEnabledCheckBox = New System.Windows.Forms.CheckBox()
+        Me.ToyHSpeedNumericUpDown = New System.Windows.Forms.NumericUpDown()
+        Me.PlayAreaPanel = New System.Windows.Forms.Panel()
+        Me.GreenToyPanel = New System.Windows.Forms.Panel()
+        Me.GreenToyPictureBox = New System.Windows.Forms.PictureBox()
+        Me.ToyPanel = New System.Windows.Forms.Panel()
+        Me.ToyPictureBox = New System.Windows.Forms.PictureBox()
+        Me.TickTimer = New System.Windows.Forms.Timer(Me.components)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.ToySettingsPanel.SuspendLayout()
+        Me.GreenToySettingsGroupBox.SuspendLayout()
+        CType(Me.GreenToyVSpeedNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GreenToyHSpeedNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToySettingsGroupBox.SuspendLayout()
+        CType(Me.ToyVSpeedNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ToyHSpeedNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PlayAreaPanel.SuspendLayout()
+        Me.GreenToyPanel.SuspendLayout()
+        CType(Me.GreenToyPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToyPanel.SuspendLayout()
         CType(Me.ToyPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ToySettingsPanel.SuspendLayout()
-        Me.ToySettingsGroupBox.SuspendLayout()
-        CType(Me.HSpeedNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -60,56 +74,150 @@ Partial Class Form1
         Me.SplitContainer1.SplitterDistance = 166
         Me.SplitContainer1.TabIndex = 0
         '
-        'PlayAreaPanel
-        '
-        Me.PlayAreaPanel.Controls.Add(Me.ToyPanel)
-        Me.PlayAreaPanel.Location = New System.Drawing.Point(47, 78)
-        Me.PlayAreaPanel.Name = "PlayAreaPanel"
-        Me.PlayAreaPanel.Size = New System.Drawing.Size(316, 181)
-        Me.PlayAreaPanel.TabIndex = 0
-        '
-        'ToyPanel
-        '
-        Me.ToyPanel.Controls.Add(Me.ToyPictureBox)
-        Me.ToyPanel.Location = New System.Drawing.Point(119, 74)
-        Me.ToyPanel.Name = "ToyPanel"
-        Me.ToyPanel.Size = New System.Drawing.Size(59, 50)
-        Me.ToyPanel.TabIndex = 0
-        '
-        'ToyPictureBox
-        '
-        Me.ToyPictureBox.Image = Global.SomeGame_VB.My.Resources.Resources.Train_Car_Box_Car_Trimmed_Blue
-        Me.ToyPictureBox.Location = New System.Drawing.Point(13, 12)
-        Me.ToyPictureBox.Name = "ToyPictureBox"
-        Me.ToyPictureBox.Size = New System.Drawing.Size(45, 37)
-        Me.ToyPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.ToyPictureBox.TabIndex = 0
-        Me.ToyPictureBox.TabStop = False
-        '
         'ToySettingsPanel
         '
+        Me.ToySettingsPanel.Controls.Add(Me.GreenToySettingsGroupBox)
         Me.ToySettingsPanel.Controls.Add(Me.ToySettingsGroupBox)
         Me.ToySettingsPanel.Location = New System.Drawing.Point(12, 21)
         Me.ToySettingsPanel.Name = "ToySettingsPanel"
-        Me.ToySettingsPanel.Size = New System.Drawing.Size(142, 148)
+        Me.ToySettingsPanel.Size = New System.Drawing.Size(142, 238)
         Me.ToySettingsPanel.TabIndex = 0
+        '
+        'GreenToySettingsGroupBox
+        '
+        Me.GreenToySettingsGroupBox.Controls.Add(Me.GreenToyVSpeedNumericUpDown)
+        Me.GreenToySettingsGroupBox.Controls.Add(Me.GreenToyEnabledCheckBox)
+        Me.GreenToySettingsGroupBox.Controls.Add(Me.GreenToyHSpeedNumericUpDown)
+        Me.GreenToySettingsGroupBox.Location = New System.Drawing.Point(21, 116)
+        Me.GreenToySettingsGroupBox.Name = "GreenToySettingsGroupBox"
+        Me.GreenToySettingsGroupBox.Size = New System.Drawing.Size(118, 97)
+        Me.GreenToySettingsGroupBox.TabIndex = 1
+        Me.GreenToySettingsGroupBox.TabStop = False
+        Me.GreenToySettingsGroupBox.Text = "Green Train Car"
+        '
+        'GreenToyVSpeedNumericUpDown
+        '
+        Me.GreenToyVSpeedNumericUpDown.Location = New System.Drawing.Point(12, 44)
+        Me.GreenToyVSpeedNumericUpDown.Maximum = New Decimal(New Integer() {20, 0, 0, 0})
+        Me.GreenToyVSpeedNumericUpDown.Minimum = New Decimal(New Integer() {20, 0, 0, -2147483648})
+        Me.GreenToyVSpeedNumericUpDown.Name = "GreenToyVSpeedNumericUpDown"
+        Me.GreenToyVSpeedNumericUpDown.Size = New System.Drawing.Size(105, 20)
+        Me.GreenToyVSpeedNumericUpDown.TabIndex = 2
+        '
+        'GreenToyEnabledCheckBox
+        '
+        Me.GreenToyEnabledCheckBox.AutoSize = True
+        Me.GreenToyEnabledCheckBox.Checked = True
+        Me.GreenToyEnabledCheckBox.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.GreenToyEnabledCheckBox.Location = New System.Drawing.Point(12, 70)
+        Me.GreenToyEnabledCheckBox.Name = "GreenToyEnabledCheckBox"
+        Me.GreenToyEnabledCheckBox.Size = New System.Drawing.Size(43, 17)
+        Me.GreenToyEnabledCheckBox.TabIndex = 1
+        Me.GreenToyEnabledCheckBox.Text = "Go!"
+        Me.GreenToyEnabledCheckBox.UseVisualStyleBackColor = True
+        '
+        'GreenToyHSpeedNumericUpDown
+        '
+        Me.GreenToyHSpeedNumericUpDown.Location = New System.Drawing.Point(12, 21)
+        Me.GreenToyHSpeedNumericUpDown.Maximum = New Decimal(New Integer() {20, 0, 0, 0})
+        Me.GreenToyHSpeedNumericUpDown.Minimum = New Decimal(New Integer() {20, 0, 0, -2147483648})
+        Me.GreenToyHSpeedNumericUpDown.Name = "GreenToyHSpeedNumericUpDown"
+        Me.GreenToyHSpeedNumericUpDown.Size = New System.Drawing.Size(105, 20)
+        Me.GreenToyHSpeedNumericUpDown.TabIndex = 0
         '
         'ToySettingsGroupBox
         '
-        Me.ToySettingsGroupBox.Controls.Add(Me.HSpeedNumericUpDown)
-        Me.ToySettingsGroupBox.Location = New System.Drawing.Point(11, 13)
+        Me.ToySettingsGroupBox.Controls.Add(Me.ToyVSpeedNumericUpDown)
+        Me.ToySettingsGroupBox.Controls.Add(Me.ToyEnabledCheckBox)
+        Me.ToySettingsGroupBox.Controls.Add(Me.ToyHSpeedNumericUpDown)
+        Me.ToySettingsGroupBox.Location = New System.Drawing.Point(21, 13)
         Me.ToySettingsGroupBox.Name = "ToySettingsGroupBox"
-        Me.ToySettingsGroupBox.Size = New System.Drawing.Size(118, 65)
+        Me.ToySettingsGroupBox.Size = New System.Drawing.Size(118, 97)
         Me.ToySettingsGroupBox.TabIndex = 0
         Me.ToySettingsGroupBox.TabStop = False
         Me.ToySettingsGroupBox.Text = "Purple Train Car"
         '
-        'HSpeedNumericUpDown
+        'ToyVSpeedNumericUpDown
         '
-        Me.HSpeedNumericUpDown.Location = New System.Drawing.Point(12, 21)
-        Me.HSpeedNumericUpDown.Name = "HSpeedNumericUpDown"
-        Me.HSpeedNumericUpDown.Size = New System.Drawing.Size(105, 20)
-        Me.HSpeedNumericUpDown.TabIndex = 0
+        Me.ToyVSpeedNumericUpDown.Location = New System.Drawing.Point(12, 44)
+        Me.ToyVSpeedNumericUpDown.Maximum = New Decimal(New Integer() {20, 0, 0, 0})
+        Me.ToyVSpeedNumericUpDown.Minimum = New Decimal(New Integer() {20, 0, 0, -2147483648})
+        Me.ToyVSpeedNumericUpDown.Name = "ToyVSpeedNumericUpDown"
+        Me.ToyVSpeedNumericUpDown.Size = New System.Drawing.Size(105, 20)
+        Me.ToyVSpeedNumericUpDown.TabIndex = 2
+        '
+        'ToyEnabledCheckBox
+        '
+        Me.ToyEnabledCheckBox.AutoSize = True
+        Me.ToyEnabledCheckBox.Checked = True
+        Me.ToyEnabledCheckBox.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ToyEnabledCheckBox.Location = New System.Drawing.Point(12, 70)
+        Me.ToyEnabledCheckBox.Name = "ToyEnabledCheckBox"
+        Me.ToyEnabledCheckBox.Size = New System.Drawing.Size(43, 17)
+        Me.ToyEnabledCheckBox.TabIndex = 1
+        Me.ToyEnabledCheckBox.Text = "Go!"
+        Me.ToyEnabledCheckBox.UseVisualStyleBackColor = True
+        '
+        'ToyHSpeedNumericUpDown
+        '
+        Me.ToyHSpeedNumericUpDown.Location = New System.Drawing.Point(12, 21)
+        Me.ToyHSpeedNumericUpDown.Maximum = New Decimal(New Integer() {20, 0, 0, 0})
+        Me.ToyHSpeedNumericUpDown.Minimum = New Decimal(New Integer() {20, 0, 0, -2147483648})
+        Me.ToyHSpeedNumericUpDown.Name = "ToyHSpeedNumericUpDown"
+        Me.ToyHSpeedNumericUpDown.Size = New System.Drawing.Size(105, 20)
+        Me.ToyHSpeedNumericUpDown.TabIndex = 0
+        '
+        'PlayAreaPanel
+        '
+        Me.PlayAreaPanel.Controls.Add(Me.GreenToyPanel)
+        Me.PlayAreaPanel.Controls.Add(Me.ToyPanel)
+        Me.PlayAreaPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PlayAreaPanel.Location = New System.Drawing.Point(0, 0)
+        Me.PlayAreaPanel.Name = "PlayAreaPanel"
+        Me.PlayAreaPanel.Size = New System.Drawing.Size(405, 334)
+        Me.PlayAreaPanel.TabIndex = 0
+        '
+        'GreenToyPanel
+        '
+        Me.GreenToyPanel.Controls.Add(Me.GreenToyPictureBox)
+        Me.GreenToyPanel.Location = New System.Drawing.Point(22, 75)
+        Me.GreenToyPanel.Name = "GreenToyPanel"
+        Me.GreenToyPanel.Size = New System.Drawing.Size(66, 35)
+        Me.GreenToyPanel.TabIndex = 1
+        '
+        'GreenToyPictureBox
+        '
+        Me.GreenToyPictureBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GreenToyPictureBox.Image = Global.SomeGame_VB.My.Resources.Resources.Train_Car_Cattle_Car_Trimmed_
+        Me.GreenToyPictureBox.Location = New System.Drawing.Point(0, 0)
+        Me.GreenToyPictureBox.Name = "GreenToyPictureBox"
+        Me.GreenToyPictureBox.Size = New System.Drawing.Size(66, 35)
+        Me.GreenToyPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.GreenToyPictureBox.TabIndex = 0
+        Me.GreenToyPictureBox.TabStop = False
+        '
+        'ToyPanel
+        '
+        Me.ToyPanel.Controls.Add(Me.ToyPictureBox)
+        Me.ToyPanel.Location = New System.Drawing.Point(119, 75)
+        Me.ToyPanel.Name = "ToyPanel"
+        Me.ToyPanel.Size = New System.Drawing.Size(65, 35)
+        Me.ToyPanel.TabIndex = 0
+        '
+        'ToyPictureBox
+        '
+        Me.ToyPictureBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ToyPictureBox.Image = Global.SomeGame_VB.My.Resources.Resources.Train_Car_Box_Car_Trimmed_Blue
+        Me.ToyPictureBox.Location = New System.Drawing.Point(0, 0)
+        Me.ToyPictureBox.Name = "ToyPictureBox"
+        Me.ToyPictureBox.Size = New System.Drawing.Size(65, 35)
+        Me.ToyPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ToyPictureBox.TabIndex = 0
+        Me.ToyPictureBox.TabStop = False
+        '
+        'TickTimer
+        '
+        Me.TickTimer.Enabled = True
         '
         'Form1
         '
@@ -117,18 +225,27 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(575, 334)
         Me.Controls.Add(Me.SplitContainer1)
+        Me.KeyPreview = True
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.ToySettingsPanel.ResumeLayout(False)
+        Me.GreenToySettingsGroupBox.ResumeLayout(False)
+        Me.GreenToySettingsGroupBox.PerformLayout()
+        CType(Me.GreenToyVSpeedNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GreenToyHSpeedNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToySettingsGroupBox.ResumeLayout(False)
+        Me.ToySettingsGroupBox.PerformLayout()
+        CType(Me.ToyVSpeedNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ToyHSpeedNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PlayAreaPanel.ResumeLayout(False)
+        Me.GreenToyPanel.ResumeLayout(False)
+        CType(Me.GreenToyPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToyPanel.ResumeLayout(False)
         CType(Me.ToyPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ToySettingsPanel.ResumeLayout(False)
-        Me.ToySettingsGroupBox.ResumeLayout(False)
-        CType(Me.HSpeedNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -140,5 +257,13 @@ Partial Class Form1
     Friend WithEvents TickTimer As Timer
     Friend WithEvents ToySettingsPanel As Panel
     Friend WithEvents ToySettingsGroupBox As GroupBox
-    Friend WithEvents HSpeedNumericUpDown As NumericUpDown
+    Friend WithEvents ToyHSpeedNumericUpDown As NumericUpDown
+    Friend WithEvents ToyEnabledCheckBox As CheckBox
+    Friend WithEvents ToyVSpeedNumericUpDown As NumericUpDown
+    Friend WithEvents GreenToySettingsGroupBox As GroupBox
+    Friend WithEvents GreenToyVSpeedNumericUpDown As NumericUpDown
+    Friend WithEvents GreenToyEnabledCheckBox As CheckBox
+    Friend WithEvents GreenToyHSpeedNumericUpDown As NumericUpDown
+    Friend WithEvents GreenToyPanel As Panel
+    Friend WithEvents GreenToyPictureBox As PictureBox
 End Class

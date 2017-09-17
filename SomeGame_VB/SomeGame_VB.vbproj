@@ -121,5 +121,8 @@
   <ItemGroup>
     <None Include="Resources\Train Car Box Car Trimmed Blue.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Train Car Cattle Car Trimmed .png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

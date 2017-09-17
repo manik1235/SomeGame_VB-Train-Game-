@@ -121,4 +121,7 @@
   <data name="Train Car Box Car Trimmed Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Train Car Box Car Trimmed Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Train Car Cattle Car Trimmed " type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Train Car Cattle Car Trimmed .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
